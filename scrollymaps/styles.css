@@ -1,0 +1,283 @@
+html,
+body {
+	font-family: "Open Sans";
+	margin: 0;
+	padding: 0;
+	color: #242424; /*almost black*/
+}
+
+#background {
+	position: fixed;
+	display: block;
+	background-color: #f7f6f3; /*almost white*/
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+}
+
+#intro p,
+#outro p {
+	background-color: #f7f6f3cc;
+}
+
+p {
+	line-height: 1.5rem;
+}
+
+h1,
+h2 {
+	font-family: "Raleway", sans-serif;
+	font-weight: 900;
+}
+
+h1 {
+	max-width: 750px;
+	margin: 1rem auto;
+	font-size: 3rem;
+}
+
+h2 {
+	margin: 1rem auto 2rem auto;
+	font-size: 2rem;
+	max-width: 750px;
+}
+
+hr {
+	border: none;
+	height: 5px;
+	background-color: #ffcb00;
+	width: 650px;
+	margin: 45px auto;
+}
+
+.sectionContainer h2 {
+	margin: 4.5rem auto 1.5rem auto;
+}
+
+p,
+#sectionList {
+	max-width: 850px;
+	margin: auto;
+}
+
+#sectionList {
+	text-align: center;
+	border-spacing: 10px;
+}
+
+#sectionList a {
+	display: table-cell;
+	text-decoration: none;
+	text-align: center;
+	color: #f7f6f3;
+	padding: 15px;
+	border-radius: 6px;
+}
+
+#sectionList .colourSectionA {
+	background-color: #99594d;
+}
+
+#sectionList .colourSectionB {
+	background-color: #636b4a;
+}
+
+#sectionList .colourSectionC {
+	background-color: #759e9e;
+}
+
+#headingA {
+	color: #99594d;
+}
+
+#headingB {
+	color: #636b4a;
+}
+
+#headingC {
+	color: #759e9e;
+}
+
+.sectionContainer {
+	padding: 1px;
+}
+
+.sectionContainer.colourSectionA {
+	border-left: #99594d solid 60px;
+}
+
+.sectionContainer.colourSectionB {
+	border-left: #636b4a solid 60px;
+}
+
+.sectionContainer.colourSectionC {
+	border-left: #759e9e solid 60px;
+}
+
+h1,
+h2 {
+	text-align: center;
+}
+
+.scrolly {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	/*background-color: #f3f3f3;*/
+	padding: 1rem;
+}
+
+.scrolly > * {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+article {
+	position: relative;
+	padding: 0 1rem;
+	max-width: 20rem;
+}
+
+figure {
+	position: -webkit-sticky;
+	position: sticky;
+	width: 100%;
+	margin: 0;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	z-index: 0;
+}
+
+figure img {
+	/*text-align: center;*/
+	/*padding: 1rem;*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	/*font-size: 8rem;*/
+	/*font-weight: 900;*/
+	color: #fff;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/*figure div img {
+	width: 100%;
+}*/
+
+.step {
+	margin: 0 auto 2rem auto;
+	padding: 1rem;
+}
+
+.step:last-child {
+	margin-bottom: 0;
+}
+
+.step.is-active {
+	background-color: #fffefc;
+}
+
+.step p {
+	text-align: center;
+	/*padding: 1rem;*/
+}
+
+.step .stepInner {
+	position: sticky;
+	top: 25px;
+	background-color: #fff5;
+	color: #888;
+	padding: 15px;
+}
+
+.step.is-active .stepInner {
+	background-color: #fcfcfc;
+	color: inherit;
+}
+
+#mapB,
+#mapC {
+	/*setting height explicitly is required for Leaflet*/
+	height: 100%;
+	width: 100%;
+}
+
+#timeB,
+#legendB {
+	display: block;
+	position: fixed;
+	z-index: 1000; /*leaflet: 400*/
+}
+
+#timeB {
+	top: 0;
+	right: 0;
+	background-color: white;
+	padding: 16px;
+	opacity: 0.8;
+}
+
+#legendB {
+	bottom: 16px; /*avoid overlap with OSM attribution*/
+	right: 0;
+}
+
+.legendLabel {
+	font-family: sans-serif;
+	font-size: 12px;
+	text-anchor: end;
+	dominant-baseline: central;
+}
+
+#gBikePath path {
+	fill: transparent;
+	stroke: #606060;
+	stroke-width: 2px;
+}
+
+#gBikePath.background path {
+	stroke: #848484;
+	stroke-width: 2px;
+}
+
+#arbutton {
+	/*display: table;*/
+	background-color: #666;
+	color: white;
+	padding: 50px 80px;
+	/*margin: 100px auto;*/
+	text-decoration: none;
+	text-align: center;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+
+#arbutton:hover {
+	background-color: #444;
+	box-shadow: 0px 0px 10px #919191;
+}
+
+#outrobuttons {
+	display: table;
+	max-width: 850px;
+	margin: 0 auto;
+	border-spacing: 10px;
+}
+
+#outrobuttons * {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.hidden {
+	visibility: hidden;
+}
